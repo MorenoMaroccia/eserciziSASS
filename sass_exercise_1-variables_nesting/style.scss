@@ -1,0 +1,41 @@
+$color-primary: red; 
+$color-tertiary: green;
+$color-secondary: blue;
+
+.exercise { 
+    border: 1px solid $color-primary;
+    height: 200px;
+
+.exercise-title {
+    color: $color-tertiary;
+    text-decoration: underline blue;
+    text-align: center;
+    
+    
+}
+}
+.container {
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+}
+
+.item {
+    border: 1px solid $color-tertiary;
+    
+}
+p {
+    text-align: center;
+    color: $color-secondary;
+    
+
+   
+    
+} 
+.p1 {
+        color: $color-secondary;
+    }
+.p2 {
+        color: $color-primary;
+    }
