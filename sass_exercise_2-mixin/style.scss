@@ -1,0 +1,47 @@
+@mixin article-card($color, $color2, $font, $text) {
+     color: $color;
+     border: 1px solid $color2;
+     font-size: $font;
+     text-align: $text
+    }
+   
+
+    .art1 {
+        @include article-card(blue, green, 1rem,center);
+        
+    }
+    .art2 {
+        @include article-card(red, green, 1rem,center);
+    }
+    .art3 {
+        @include article-card(green, blue, 1rem,center);
+        width: 100%;
+       text-align: center;
+
+    }
+
+    div{
+        @include article-card(none,red, none, none )
+       
+       
+    }
+$font:24px;
+    section{
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sec2 {
+        padding: 20px;
+        font-size: $font;
+    }
+
+    h1 {
+        text-align: center;
+        text-decoration: underline blue;
+        color: green;
+    }
+
+    
