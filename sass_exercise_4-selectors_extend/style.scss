@@ -1,0 +1,79 @@
+@function rem-calc($size, $font-size : $font-size) {
+    $font-size: $font-size +0px;
+    $remSize: $font-size / $size;
+    @return #{$remSize}rem;
+}
+
+$font-size: 16;
+
+body {
+    font-size: #{$font-size}px;
+    font-size: rem-calc(16px); // 1rem
+}
+
+
+
+@mixin article-card($color, $color2, $text: center) {
+    color: $color;
+    border: 1px solid $color2;
+    font-size: rem-calc(16px, 16);
+}
+
+.art1 {
+    @include article-card(blue, green);
+}
+
+.art2 {
+    @include article-card(red, green);
+}
+
+.art3 {
+    @include article-card(green, blue);
+    width: 100%;
+    text-align: center;
+}
+
+div {
+    @include article-card(none, red, none)
+}
+
+$font: 24px;
+
+section {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sec2 {
+    padding: 20px;
+    font-size: $font;
+}
+
+h-style {
+    color: green;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+h2-style {
+    @include article-card(green, red);
+    padding: rem-calc(16px, 16);
+}
+
+h1 {
+    text-decoration: underline blue;
+    @extend h-style;
+    margin: 0%;
+}
+
+h2 {
+    @extend h-style;
+    @extend h2-style;
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+}
