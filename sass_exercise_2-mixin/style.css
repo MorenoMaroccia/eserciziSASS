@@ -1,49 +1,32 @@
-.art1 {
-  color: blue;
-  border: 1px solid green;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.art2 {
-  color: red;
-  border: 1px solid green;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.art3 {
-  color: green;
-  border: 1px solid blue;
-  font-size: 1rem;
-  text-align: center;
-  width: 100%;
-  text-align: center;
-}
-
 div {
-  color: none;
-  border: 1px solid red;
-  font-size: none;
-  text-align: none;
+  border: solid 1px red;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: green;
+  text-decoration: underline blue;
 }
 
 section {
   display: flex;
   justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
 }
-
-.sec2 {
-  padding: 20px;
-  font-size: 24px;
+section article {
+  border: solid green 1px;
+  width: 100%;
 }
-
-h1 {
-  text-align: center;
-  text-decoration: underline blue;
-  color: green;
+section article:nth-child(even) {
+  color: red;
+  border: solid 1px green;
+  font-size: 1rem;
+}
+section article:nth-child(odd) {
+  color: blue;
+  border: solid 1px green;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
