@@ -10,15 +10,15 @@ $green: green;
 }
 
 @function rem($px){
-    @return ($px / 16px) * 1rem
-} 
+    @return ($px / 16px) * 1rem;
+}  
 
 div { 
     border: solid rem(1px) $red;
      align-items: center;
      display: flex;
      flex-direction: column;
- }
+}
 
  h1 {
      color: $green;
