@@ -1,63 +1,44 @@
 
-@function rem-calc($size, $font-size : $font-size) {
-    $font-size: $font-size + 0px;
-    $remSize:  $font-size / $size;
-    @return #{$remSize}rem;
-}
+$red: red;
+$blue: blue;
+$green: green;
 
-
-$font-size: 16;
-
-body {
-  font-size: #{$font-size}px;
-  font-size: rem-calc(16px); // 1rem
-}
-
-
-
-@mixin article-card($color, $color2, $text) {
+@mixin article($color, $borderclr, $fontsize) {
     color: $color;
-    border: 1px solid $color2;
-    font-size: rem-calc(16px,16);
-    text-align: $text;
-   }
-  
+    border: solid rem(1px) $borderclr;
+    font-size: $fontsize;
+}
 
-   .art1 {
-       @include article-card(blue, green,center);
-      
-       
-   }
-   .art2 {
-       @include article-card(red, green,center);
-   }
-   .art3 {
-       @include article-card(green, blue,center);
-       width: 100%;
-      text-align: center;
+@function rem($px){
+    @return ($px / 16px) * 1rem
+} 
 
-   }
+div { 
+    border: solid rem(1px) $red;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+ }
 
-   div{
-       @include article-card(none,red, none )
-      
-      
-   }
-$font:24px;
-   section{
-       display: flex;
-       justify-content: center;
-       padding-left: 20px;
-       padding-right: 20px;
-   }
+ h1 {
+     color: $green;
+     text-decoration: underline $blue;
+ }
+ 
+ section {
+    display: flex;
+    justify-content: center;
 
-   .sec2 {
-       padding: 20px;
-       font-size: $font;
-   }
+    article {
+        border: solid $green rem(1px);
+        width: 100%;
 
-   h1 {
-       text-align: center;
-       text-decoration: underline blue;
-       color: green;
-   }
+        &:nth-child(even) {
+            @include article($red, $green, rem(16px));
+        }
+
+        &:nth-child(odd) {
+            @include article($blue, $green,rem(16px));
+        }
+    }
+ }
