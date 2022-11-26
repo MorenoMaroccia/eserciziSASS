@@ -1,41 +1,39 @@
-$color-primary: red; 
-$color-tertiary: green;
-$color-secondary: blue;
+$red: red;
+$blue: blue;
+$green: green;
 
-.exercise { 
-    border: 1px solid $color-primary;
-    height: 200px;
 
-.exercise-title {
-    color: $color-tertiary;
-    text-decoration: underline blue;
-    text-align: center;
-    
-    
-}
-}
-.container {
+div { 
+   border: solid 1px $red;
+    align-items: center;
     display: flex;
-    padding-left: 2%;
-    padding-right: 2%;
-    
+    flex-direction: column;
+}
+h1 {
+    color: $green;
+    text-decoration: underline $blue;
 }
 
-.item {
-    border: 1px solid $color-tertiary;
-    
-}
-p {
-    text-align: center;
-    color: $color-secondary;
-    
+section {
+    display: flex;
+    justify-content: center;
+    article {
+        border: solid $green 1px;
+        width: 100%;
+        &:nth-child(even) {
+            color: $red;
+            border: solid 1px $green;
+            font-size: 1rem;
+        }
+        &:nth-child(odd) {
+            color: $blue;
+            border: solid rem(1px) $green;
+            font-size: 1rem;
+        }
+    }
 
-   
-    
-} 
-.p1 {
-        color: $color-secondary;
-    }
-.p2 {
-        color: $color-primary;
-    }
+}
+
+
+
+

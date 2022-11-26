@@ -1,34 +1,32 @@
-.exercise {
-  border: 1px solid red;
-  height: 200px;
+div {
+  border: solid 1px red;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-.exercise .exercise-title {
+
+h1 {
   color: green;
   text-decoration: underline blue;
-  text-align: center;
 }
 
-.container {
+section {
   display: flex;
-  padding-left: 2%;
-  padding-right: 2%;
+  justify-content: center;
 }
-
-.item {
-  border: 1px solid green;
+section article {
+  border: solid green 1px;
+  width: 100%;
 }
-
-p {
-  text-align: center;
-  color: blue;
-}
-
-.p1 {
-  color: blue;
-}
-
-.p2 {
+section article:nth-child(even) {
   color: red;
+  border: solid 1px green;
+  font-size: 1rem;
+}
+section article:nth-child(odd) {
+  color: blue;
+  border: solid rem(1px) green;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
